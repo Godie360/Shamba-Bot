@@ -1,0 +1,89 @@
+body {
+    background-color: #addaf3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .container {
+    max-width: 400px;
+    height: 656px;
+    box-shadow: 10px 10px 40px #9c9a9a;
+    background-color: #f2f2f2;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+  .container:hover {
+    box-shadow: 5px 5px 20px #d2d2d2;
+  }
+  .profile-image {
+    padding-top: 10px;
+  }
+  .avatar-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 40px auto;
+  }
+  .avatar {
+    width: 100%;
+    height: auto;
+  }
+  .icon {
+    width: 35px;
+    height: 35px;
+    background-color: #57d290;
+    border-radius: 50%;
+    z-index: 90000;
+  }
+  .fa-circle {
+    color: #57d290;
+    margin-top: -73px !important;
+    margin-left: 230px;
+    display: block;
+  }
+  .fa-gamepad {
+    color: #fff;
+    margin-top: -23px !important;
+    margin-left: 237px;
+    display: block;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #414141;
+  }
+  table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+  }
+  td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #727272;
+    color: #727272;
+  }
+  .left {
+    text-align: left;
+  }
+  .right {
+    text-align: right;
+  }
+  .button {
+    margin: 30px auto;
+    text-align: center;
+    background-color: #57d290;
+    color: #fff;
+    padding: 20px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    font-weight: 500;
+    box-shadow: 5px 5px 30px #d2d2d2;
+  }
+  .button:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #d2d2d2;
+  }
+  

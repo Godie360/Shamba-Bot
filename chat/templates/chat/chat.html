@@ -1,0 +1,95 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shamba Bot</title>
+    <link rel="stylesheet" href="{% static 'chat/css/highlight.min.css' %}">
+    <link rel="stylesheet" href="{% static 'chat/css/index.css' %}">
+    <link rel="icon" href="{% static 'chat/img/favicon.ico' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "chat/css2/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "chat/css2/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "chat/css2/style.css" %}">
+    <link rel="stylesheet" href="{% static "chat/fonts/icomoon/style.css" %}">
+    <meta name="description" content="ChatGPT" />
+</head>
+
+<body>   
+ {% include  "chat/includes/base.html" %}
+ 
+    
+    <aside class="sidebar">
+        <div class="toggle">
+          <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+                <span></span>
+              </a>
+        </div>
+        <div class="side-inner">
+  
+          <div class="profile">
+            {% if profile.image %}
+          <img src="{{ profile.image.url }}" alt="Image" class="img-fluid">   
+           {% else %}
+           <img src="{% static 'chat/img/cartoon-character-with-green-background-smile-that-says-happy-birthday_885258-1047.jpg' %}" alt="Default Avatar">
+           {% endif %}
+
+            <h3 class="name">{{request.user.username.capitalize}}</h3>
+            <span class="country">{{request.user.email}}</span>
+          </div>
+  
+          
+          <div class="nav-menu">
+            <ul>
+              
+             <li><a href="{% url "home"%}"><span class="icon-home mr-3"></span>Home</a></li>
+              <li><a href="#"><span class="icon-notifications mr-3"></span>Notifications</a></li>
+              <li><a href="#"><span class="icon-chat mr-3"></span>Chats</a></li>
+              <li><a href="{% url "register"%}"><span class="icon-sign-out mr-3"></span>Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </aside>
+
+    <div id="response-list">
+    </div>
+    <div id="bottom-container">
+        <div id="regenerate-button-container">
+            <button id="regenerate-response-button">
+                Regenerate Response
+            </button>
+        </div>
+        <!-- <div id="model-select-container">
+            <label for="model-select">Select model:</label>
+            <select id="model-select">
+                <option value="gpt" selected>GPT-3 (Понимает естественный язык)</option>
+                <option value="codex">Codex (Understand and generate code, including translating natural language to
+                    code)</option>
+                <option value="image">Create Image (Create AI image using DALL·E models)</option>
+            </select>
+        </div> -->
+        <div id="input-container">
+            <div id="prompt-input" contentEditable></div>
+            <button id="submit-button"></button>
+        </div>
+    </div>
+
+    <script src="{% static "chat/js2/jquery-3.3.1.min.js" %}"></script>
+    <script src="{% static "chat/js2/popper.min.js" %}"></script>
+    <script src="{% static "chat/js2/bootstrap.min.js" %}"></script>
+    <script src="{% static "chat/js2/main.js" %}"></script>
+     
+
+    <script src="{% static 'chat/js/highlight.min.js' %}"></script>
+    <script src="{% static 'chat/js/showdown.min.js' %}"></script>
+    <script src="{% static 'chat/js/index.js' %}"></script>
+</body>
+
+</html>

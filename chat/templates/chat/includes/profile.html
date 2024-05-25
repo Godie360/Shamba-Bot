@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Profile card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> 
+    <link rel="stylesheet" href="{% static "chat/css/profile.css"%}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile-image">
+        <div class="avatar-container">
+          <img class="avatar" src="{{profile.image}}" alt="Avatar" />
+        </div>
+      </div>
+      <i class="fas fa-circle fa-2x"></i>
+      <i class="fas fa-gamepad fa-sm"></i>
+      <div class="nick">
+        <h1>{{request.user.username}}</h1>
+      </div>
+      <table>
+        <tr>
+          <td class="left">Full Name</td>
+          <td class="right">{{profile.full_name}}</td>
+        </tr>
+        <tr>
+          <td class="left">Following</td>
+          <td class="right">1820</td>
+        </tr>
+        <tr>
+          <td class="left">Reputation</td>
+          <td class="right">98%</td>
+        </tr>
+        <tr>
+          <td class="left">Rank</td>
+          <td class="right">Expert</td>
+        </tr>
+      </table>
+      <div class="button">
+        <i class="fa fa-paper-plane fa-lg"></i>
+        Contact
+      </div>
+
+    </div>
+  </body>
+</html>
