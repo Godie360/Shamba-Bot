@@ -12,9 +12,9 @@ import json
 from dotenv import load_dotenv
 import os
 
-load_dotenv
+load_dotenv()
 
-openai.api_key = "sk-proj-iq3JFlS7UW6ifv3MB38kT3BlbkFJAAo8TaWoPQmLa3krK9pG"
+openai_api_key = os.getenv('OPENAI_API_KEY')
 
 @api_view(['GET'])
 def getMessages(request, pk):
