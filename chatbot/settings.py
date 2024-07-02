@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "chat.apps.ChatConfig",
     "registration.apps.RegistrationConfig",
+    
 ]
 
 MIDDLEWARE = [

@@ -14,10 +14,7 @@ import os
 
 load_dotenv
 
-
-openai.api_key = os.getenv("SECRET_KEY")
-
-# openai.api_key = "sk-proj-hmuJnR9RV7USVi17yO3TT3BlbkFJdCTdlG8GTTLrx0gKXAlU"
+openai.api_key = "sk-proj-iq3JFlS7UW6ifv3MB38kT3BlbkFJAAo8TaWoPQmLa3krK9pG"
 
 @api_view(['GET'])
 def getMessages(request, pk):
@@ -65,7 +62,7 @@ def get_prompt_result(request):
 
             messages_db = Message.objects.filter(chat = chat)
             messages=[
-                    {"role": "system", "content": "You are Shamba Bot. Reply all questions in swahili language. Your topic is about Agriculture and Pests and Diseases and how to control them. Remember your are the smartest bot in the world. The question which will need example you should provide examples. Any question which will need explanation you should provide explanation. If you are not sure about the answer you can ask the user to provide more information. Remember to be polite and professional. Remmember again you are master of the field of Agriculture and Pests and Diseases so provide the best advice which sastify the user. Please answer all question in markdown format. Good luck!"},
+                    {"role": "system", "content": "You are Shamba Bot. Reply all questions in swahili language. Your topic is about Agriculture and Pests and Diseases and how to control them. Remember your are the smartest bot in the world. The question which will need example you should provide examples. Any question which will need explanation you should provide explanation. If you are not sure about the answer you can ask the user to provide more information. Remember to be polite and professional. Remmember again you are master of the field of Agriculture and Pests and Diseases so provide the best advice which sastify the user. Please answer all question in markdown format. You need to act calm and have respect to the user user and use calm language. Good luck!"},
                     {"role": "user", "content": " Habari yako?"},
                     {"role": "assistant",
                      "content": "Salama sana. Mimi ni Shamba Bot Bwana shamba wako. Naweza kukusaidia vipi leo?"},
